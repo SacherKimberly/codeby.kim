@@ -7,7 +7,7 @@ const Contact = () => {
     { icon: Github, href: "#", label: "GitHub" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
     { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Mail, href: "mailto:john@example.com", label: "Email" }
+    { icon: Mail, href: "mailto:kim@example.com", label: "Email" }
   ];
 
   return (
@@ -26,7 +26,7 @@ const Contact = () => {
             <a
               key={link.label}
               href={link.href}
-              className="group w-14 h-14 bg-slate-700/50 rounded-full flex items-center justify-center border border-slate-600/30 hover:border-blue-400/50 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 transition-all duration-300 hover:scale-110"
+              className="group w-14 h-14 bg-slate-700/50 rounded-full flex items-center justify-center border border-slate-600/30 hover:border-orange-400/50 hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-500 transition-all duration-300 hover:scale-110"
               aria-label={link.label}
             >
               <link.icon className="w-6 h-6 text-slate-400 group-hover:text-white transition-colors duration-300" />
@@ -40,8 +40,8 @@ const Contact = () => {
             Drop me a line and let's discuss your next big idea.
           </p>
           <a 
-            href="mailto:john@example.com"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 hover:scale-105"
+            href="mailto:kim@example.com"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 hover:scale-105"
           >
             <Mail className="w-5 h-5" />
             Get In Touch
@@ -50,7 +50,7 @@ const Contact = () => {
         
         <div className="mt-12 pt-8 border-t border-slate-600/30">
           <p className="text-slate-500">
-            © 2024 John Doe. All rights reserved.
+            © 2024 Kim Sacher. All rights reserved.
           </p>
         </div>
       </div>
