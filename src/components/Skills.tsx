@@ -62,8 +62,8 @@ const Skills = () => {
             Technical Skills
           </h2>
           <p className="text-lg text-slate-400 max-w-3xl mx-auto">
-            A comprehensive overview of my technical expertise across various programming languages, 
-            development environments, and modern web technologies.
+            Eine umfassende Übersicht meiner technischen Expertise in verschiedenen Programmiersprachen, 
+            Entwicklungsumgebungen und modernen Web-Technologien.
           </p>
         </div>
         
@@ -71,27 +71,30 @@ const Skills = () => {
           {skillCategories.map((category, categoryIndex) => (
             <div 
               key={category.title}
-              className="bg-slate-700/20 rounded-lg p-6 border border-slate-600/30 hover:border-orange-400/50 transition-all duration-300"
+              className="bg-slate-700/20 rounded-xl p-8 border border-slate-600/30 hover:border-orange-400/50 transition-all duration-300 group"
             >
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-400 to-red-400 rounded-lg flex items-center justify-center mr-4">
-                  <category.icon className="w-6 h-6 text-white" />
+              <div className="flex items-center mb-8">
+                <div className="w-14 h-14 bg-gradient-to-r from-orange-400 to-red-400 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <category.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-100">{category.title}</h3>
+                <h3 className="text-2xl font-semibold text-slate-100">{category.title}</h3>
               </div>
               
-              <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skill.name} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-slate-300 font-medium">{skill.name}</span>
-                      <span className="text-slate-400 text-sm">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-slate-600/50 rounded-full h-2">
-                      <div 
-                        className="bg-gradient-to-r from-orange-400 to-red-400 h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
+                  <div 
+                    key={skill.name} 
+                    className="bg-slate-800/40 rounded-lg p-4 border border-slate-600/20 hover:border-orange-400/30 transition-all duration-200 hover:transform hover:scale-105"
+                  >
+                    <div className="flex flex-col items-center text-center">
+                      <span className="text-slate-200 font-medium text-sm mb-2">{skill.name}</span>
+                      <div className="w-full bg-slate-600/50 rounded-full h-1.5 mb-2">
+                        <div 
+                          className="bg-gradient-to-r from-orange-400 to-red-400 h-1.5 rounded-full transition-all duration-1000 ease-out"
+                          style={{ width: `${skill.level}%` }}
+                        ></div>
+                      </div>
+                      <span className="text-slate-400 text-xs">{skill.level}%</span>
                     </div>
                   </div>
                 ))}
