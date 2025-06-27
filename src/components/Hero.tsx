@@ -7,7 +7,7 @@ const Hero = () => {
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
-    // Entrance animation sequence
+    // Eingangsanimation Sequenz
     const enterTimer = setTimeout(() => setIsVisible(true), 300);
     const contentTimer = setTimeout(() => setShowContent(true), 800);
     
@@ -19,7 +19,7 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated background with geometric shapes */}
+      {/* Animierter Hintergrund mit geometrischen Formen */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className={`absolute inset-0 transition-all duration-1000 ${
           isVisible ? 'opacity-100' : 'opacity-0'
@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Content */}
+      {/* Inhalt */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <div className={`transform transition-all duration-1000 ease-out ${
           showContent 
@@ -48,7 +48,7 @@ const Hero = () => {
             : 'translate-y-8 opacity-0'
         }`}>
           <p className="text-xl md:text-2xl text-slate-300 mb-8 font-light">
-            Creative Developer & Designer
+            Kreativer Entwickler & Designer
           </p>
         </div>
         
@@ -58,13 +58,13 @@ const Hero = () => {
             : 'translate-y-8 opacity-0'
         }`}>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Crafting beautiful digital experiences with modern web technologies. 
-            Passionate about clean code, stunning design, and user-centered solutions.
+            Entwicklung schöner digitaler Erlebnisse mit modernen Web-Technologien. 
+            Leidenschaftlich für sauberen Code, beeindruckendes Design und benutzerorientierte Lösungen.
           </p>
         </div>
       </div>
       
-      {/* Scroll indicator */}
+      {/* Scroll-Indikator */}
       <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-1000 ${
         showContent 
           ? 'translate-y-0 opacity-100' 
