@@ -17,7 +17,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center relative overflow-hidden bg-white">
+    <section className="min-h-screen flex items-center justify-between relative overflow-hidden bg-white px-8 md:px-16 lg:px-24 max-w-7xl mx-auto">
       {/* Animierter Hintergrund mit geometrischen Formen */}
       <div className="absolute inset-0 bg-white">
         <div className={`absolute inset-0 transition-all duration-1000 ${
@@ -29,15 +29,15 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Inhalt - Links ausgerichtet */}
-      <div className="relative z-10 px-8 md:px-16 lg:px-24 max-w-6xl">
+      {/* Hauptinhalt */}
+      <div className="relative z-10 flex-1 max-w-4xl">
         <div className={`transform transition-all duration-1000 ease-out ${
           showContent 
             ? 'translate-y-0 opacity-100 scale-100' 
             : 'translate-y-8 opacity-0 scale-95'
         }`}>
-          <h1 className="text-5xl md:text-7xl font-light mb-6 font-tt-norms tracking-wide uppercase" style={{color: '#262525'}}>
-            Kim Sacher
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-light mb-8 font-tt-norms tracking-wide" style={{color: '#262525'}}>
+            KIM<br/>SACHER
           </h1>
         </div>
         
@@ -46,8 +46,8 @@ const Hero = () => {
             ? 'translate-y-0 opacity-100' 
             : 'translate-y-8 opacity-0'
         }`}>
-          <p className="text-xl md:text-2xl mb-8 font-light uppercase tracking-widest font-tt-norms" style={{color: '#262525'}}>
-            Kreativer Entwickler & Designer
+          <p className="text-xl md:text-2xl mb-12 font-light tracking-widest font-tt-norms" style={{color: '#262525'}}>
+            KREATIVER ENTWICKLER & DESIGNER
           </p>
         </div>
         
@@ -56,10 +56,14 @@ const Hero = () => {
             ? 'translate-y-0 opacity-100' 
             : 'translate-y-8 opacity-0'
         }`}>
-          <p className="text-lg max-w-2xl leading-relaxed font-light font-tt-norms" style={{color: '#262525'}}>
+          <p className="text-lg max-w-xl leading-relaxed font-light font-tt-norms mb-12" style={{color: '#262525'}}>
             Entwicklung schöner digitaler Erlebnisse mit modernen Web-Technologien. 
             Leidenschaftlich für sauberen Code, beeindruckendes Design und benutzerorientierte Lösungen.
           </p>
+          
+          <button className="px-8 py-4 text-white font-light font-tt-norms tracking-wider hover:bg-gray-700 transition-all duration-300" style={{backgroundColor: '#262525'}}>
+            MEINE ARBEIT ANSEHEN
+          </button>
         </div>
       </div>
       
