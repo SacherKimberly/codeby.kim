@@ -23,13 +23,13 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6" style={{backgroundColor: '#E4E2DD'}}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-amber-100">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{color: '#262525'}}>
             Ausgewählte Projekte
           </h2>
-          <p className="text-lg text-amber-200 max-w-3xl mx-auto">
+          <p className="text-lg max-w-3xl mx-auto" style={{color: '#262525'}}>
             Eine kuratierte Auswahl meiner Arbeiten, die moderne Web-Entwicklungspraktiken 
             und sauberes, benutzerorientiertes Design zeigen.
           </p>
@@ -39,7 +39,8 @@ const Projects = () => {
           {projekte.map((projekt, index) => (
             <div 
               key={projekt.title}
-              className="group bg-orange-900/50 rounded-lg overflow-hidden border border-orange-600/30 hover:border-yellow-400/50 transition-all duration-300 hover:transform hover:scale-105"
+              className="group bg-white rounded-lg overflow-hidden border-2 hover:border-gray-400 transition-all duration-300 hover:transform hover:scale-105 shadow-sm"
+              style={{borderColor: '#262525'}}
             >
               <div className="relative overflow-hidden">
                 <img 
@@ -47,18 +48,19 @@ const Projects = () => {
                   alt={projekt.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-amber-900/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-amber-100">{projekt.title}</h3>
-                <p className="text-amber-200 mb-4">{projekt.description}</p>
+                <h3 className="text-xl font-semibold mb-2" style={{color: '#262525'}}>{projekt.title}</h3>
+                <p className="mb-4" style={{color: '#262525'}}>{projekt.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {projekt.technologies.map((tech) => (
                     <span 
                       key={tech}
-                      className="px-3 py-1 bg-orange-800/50 text-amber-200 text-sm rounded-full"
+                      className="px-3 py-1 text-white text-sm rounded-full"
+                      style={{backgroundColor: '#262525'}}
                     >
                       {tech}
                     </span>
@@ -68,14 +70,16 @@ const Projects = () => {
                 <div className="flex gap-3">
                   <a 
                     href={projekt.liveUrl}
-                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-amber-900 rounded-lg hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 font-medium"
+                    className="flex items-center gap-2 px-4 py-2 text-white rounded-lg hover:bg-gray-700 transition-all duration-300 font-medium"
+                    style={{backgroundColor: '#262525'}}
                   >
                     <ExternalLink className="w-4 h-4" />
                     Live Demo
                   </a>
                   <a 
                     href={projekt.githubUrl}
-                    className="flex items-center gap-2 px-4 py-2 bg-orange-800 text-amber-200 rounded-lg hover:bg-orange-700 transition-all duration-300"
+                    className="flex items-center gap-2 px-4 py-2 border-2 rounded-lg hover:bg-gray-100 transition-all duration-300"
+                    style={{borderColor: '#262525', color: '#262525'}}
                   >
                     <Github className="w-4 h-4" />
                     Code

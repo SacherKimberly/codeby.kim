@@ -37,13 +37,13 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-amber-900/30">
+    <section className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-amber-100">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{color: '#262525'}}>
             Technical Skills
           </h2>
-          <p className="text-lg text-amber-200 max-w-3xl mx-auto">
+          <p className="text-lg max-w-3xl mx-auto" style={{color: '#262525'}}>
             Eine umfassende Übersicht meiner technischen Expertise in verschiedenen Programmiersprachen, 
             Web-Technologien, Datenbanken und Cloud-Plattformen.
           </p>
@@ -53,20 +53,22 @@ const Skills = () => {
           {skillCategories.map((category, categoryIndex) => (
             <div 
               key={category.title}
-              className="bg-orange-800/20 rounded-xl p-6 border border-orange-600/30 hover:border-yellow-400/50 transition-all duration-300 group"
+              className="rounded-xl p-6 border-2 transition-all duration-300 group shadow-sm"
+              style={{backgroundColor: '#E4E2DD', borderColor: '#262525'}}
             >
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                  <category.icon className="w-6 h-6 text-amber-900" />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300" style={{backgroundColor: '#262525'}}>
+                  <category.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-amber-100">{category.title}</h3>
+                <h3 className="text-xl font-semibold" style={{color: '#262525'}}>{category.title}</h3>
               </div>
               
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, skillIndex) => (
                   <span 
                     key={skill}
-                    className="px-3 py-2 bg-amber-800/40 text-amber-100 rounded-lg text-sm font-medium border border-orange-600/20 hover:border-yellow-400/40 hover:bg-orange-700/40 transition-all duration-200"
+                    className="px-3 py-2 text-white rounded-lg text-sm font-medium border-2 hover:bg-gray-700 transition-all duration-200"
+                    style={{backgroundColor: '#262525', borderColor: '#262525'}}
                   >
                     {skill}
                   </span>

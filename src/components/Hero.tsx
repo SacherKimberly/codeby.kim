@@ -7,7 +7,6 @@ const Hero = () => {
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
-    // Eingangsanimation Sequenz
     const enterTimer = setTimeout(() => setIsVisible(true), 300);
     const contentTimer = setTimeout(() => setShowContent(true), 800);
     
@@ -18,15 +17,15 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white">
       {/* Animierter Hintergrund mit geometrischen Formen */}
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-900 via-orange-900 to-red-900">
+      <div className="absolute inset-0 bg-white">
         <div className={`absolute inset-0 transition-all duration-1000 ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}>
-          <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-32 right-32 w-48 h-48 bg-gradient-to-r from-orange-400/20 to-red-400/20 rounded-full blur-2xl animate-pulse delay-700"></div>
-          <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-gradient-to-r from-amber-300/30 to-orange-300/30 rounded-full blur-lg animate-pulse delay-300"></div>
+          <div className="absolute top-20 left-20 w-32 h-32 bg-gray-100 rounded-full blur-xl animate-pulse" style={{backgroundColor: '#E4E2DD'}}></div>
+          <div className="absolute bottom-32 right-32 w-48 h-48 bg-gray-200 rounded-full blur-2xl animate-pulse delay-700" style={{backgroundColor: '#E4E2DD'}}></div>
+          <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-gray-100 rounded-full blur-lg animate-pulse delay-300" style={{backgroundColor: '#E4E2DD'}}></div>
         </div>
       </div>
       
@@ -37,7 +36,7 @@ const Hero = () => {
             ? 'translate-y-0 opacity-100 scale-100' 
             : 'translate-y-8 opacity-0 scale-95'
         }`}>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6" style={{color: '#262525'}}>
             Kim Sacher
           </h1>
         </div>
@@ -47,7 +46,7 @@ const Hero = () => {
             ? 'translate-y-0 opacity-100' 
             : 'translate-y-8 opacity-0'
         }`}>
-          <p className="text-xl md:text-2xl text-amber-100 mb-8 font-light">
+          <p className="text-xl md:text-2xl mb-8 font-light" style={{color: '#262525'}}>
             Kreativer Entwickler & Designer
           </p>
         </div>
@@ -57,7 +56,7 @@ const Hero = () => {
             ? 'translate-y-0 opacity-100' 
             : 'translate-y-8 opacity-0'
         }`}>
-          <p className="text-lg text-amber-200 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg max-w-2xl mx-auto leading-relaxed" style={{color: '#262525'}}>
             Entwicklung schöner digitaler Erlebnisse mit modernen Web-Technologien. 
             Leidenschaftlich für sauberen Code, beeindruckendes Design und benutzerorientierte Lösungen.
           </p>
@@ -70,7 +69,7 @@ const Hero = () => {
           ? 'translate-y-0 opacity-100' 
           : 'translate-y-8 opacity-0'
       }`}>
-        <ChevronDown className="w-6 h-6 text-amber-300 animate-bounce" />
+        <ChevronDown className="w-6 h-6 animate-bounce" style={{color: '#262525'}} />
       </div>
     </section>
   );
