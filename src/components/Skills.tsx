@@ -7,45 +7,45 @@ const Skills = () => {
     {
       title: "PROGRAMMIERSPRACHEN",
       icon: Code,
-      skills: ["PYTHON", "JAVA", "JAVASCRIPT", "TYPESCRIPT", "C++", "GO"]
+      skills: ["Python", "Java", "JavaScript", "TypeScript", "C++", "Go"]
     },
     {
       title: "WEB DEVELOPMENT",
       icon: Globe,
-      skills: ["REACT", "VUE.JS", "NODE.JS", "HTML/CSS", "EXPRESS.JS", "REST APIS"]
+      skills: ["React", "Vue.js", "Node.js", "HTML/CSS", "Express.js", "REST APIs"]
     },
     {
       title: "DATENBANKEN",
       icon: Database,
-      skills: ["MONGODB", "DYNAMODB", "POSTGRESQL", "MYSQL", "REDIS", "FIREBASE"]
+      skills: ["MongoDB", "DynamoDB", "PostgreSQL", "MySQL", "Redis", "Firebase"]
     },
     {
       title: "CLOUD & AWS",
       icon: Cloud,
-      skills: ["AWS LAMBDA", "AWS S3", "EC2", "CLOUDFORMATION", "API GATEWAY", "CLOUDWATCH"]
+      skills: ["AWS Lambda", "AWS S3", "EC2", "CloudFormation", "API Gateway", "CloudWatch"]
     },
     {
       title: "ENTWICKLUNGSTOOLS",
       icon: Terminal,
-      skills: ["VS CODE", "GIT", "DOCKER", "INTELLIJ IDEA", "PYCHARM", "POSTMAN"]
+      skills: ["VS Code", "Git", "Docker", "IntelliJ IDEA", "PyCharm", "Postman"]
     },
     {
       title: "SALESFORCE",
       icon: Zap,
-      skills: ["APEX", "LIGHTNING COMPONENTS", "SOQL", "SALESFORCE ADMIN", "PROCESS BUILDER", "FLOWS"]
+      skills: ["Apex", "Lightning Components", "SOQL", "Salesforce Admin", "Process Builder", "Flows"]
     }
   ];
 
   return (
-    <section className="py-20 px-8 md:px-16 lg:px-24 bg-white">
+    <section className="py-20 px-8 md:px-16 lg:px-24 bg-white relative z-10">
       <div className="max-w-6xl">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-light mb-4 uppercase tracking-wide font-tt-norms" style={{color: '#262525'}}>
-            TECHNICAL SKILLS
+            Technical Skills
           </h2>
           <p className="text-lg max-w-3xl font-light font-tt-norms" style={{color: '#262525'}}>
-            EINE UMFASSENDE ÜBERSICHT MEINER TECHNISCHEN EXPERTISE IN VERSCHIEDENEN PROGRAMMIERSPRACHEN, 
-            WEB-TECHNOLOGIEN, DATENBANKEN UND CLOUD-PLATTFORMEN.
+            Eine umfassende Übersicht meiner technischen Expertise in verschiedenen Programmiersprachen, 
+            Web-Technologien, Datenbanken und Cloud-Plattformen.
           </p>
         </div>
         
@@ -60,7 +60,7 @@ const Skills = () => {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300" style={{backgroundColor: '#262525'}}>
                   <category.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-light font-tt-norms" style={{color: '#262525'}}>{category.title}</h3>
+                <h3 className="text-xl font-light font-tt-norms uppercase" style={{color: '#262525'}}>{category.title}</h3>
               </div>
               
               <div className="flex flex-wrap gap-3">

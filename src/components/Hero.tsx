@@ -36,8 +36,8 @@ const Hero = () => {
             ? 'translate-y-0 opacity-100 scale-100' 
             : 'translate-y-8 opacity-0 scale-95'
         }`}>
-          <h1 className="text-5xl md:text-7xl font-light mb-6 font-tt-norms tracking-wide" style={{color: '#262525'}}>
-            KIM SACHER
+          <h1 className="text-5xl md:text-7xl font-light mb-6 font-tt-norms tracking-wide uppercase" style={{color: '#262525'}}>
+            Kim Sacher
           </h1>
         </div>
         
@@ -47,7 +47,7 @@ const Hero = () => {
             : 'translate-y-8 opacity-0'
         }`}>
           <p className="text-xl md:text-2xl mb-8 font-light uppercase tracking-widest font-tt-norms" style={{color: '#262525'}}>
-            KREATIVER ENTWICKLER & DESIGNER
+            Kreativer Entwickler & Designer
           </p>
         </div>
         
@@ -57,8 +57,8 @@ const Hero = () => {
             : 'translate-y-8 opacity-0'
         }`}>
           <p className="text-lg max-w-2xl leading-relaxed font-light font-tt-norms" style={{color: '#262525'}}>
-            ENTWICKLUNG SCHÖNER DIGITALER ERLEBNISSE MIT MODERNEN WEB-TECHNOLOGIEN. 
-            LEIDENSCHAFTLICH FÜR SAUBEREN CODE, BEEINDRUCKENDES DESIGN UND BENUTZERORIENTIERTE LÖSUNGEN.
+            Entwicklung schöner digitaler Erlebnisse mit modernen Web-Technologien. 
+            Leidenschaftlich für sauberen Code, beeindruckendes Design und benutzerorientierte Lösungen.
           </p>
         </div>
       </div>
