@@ -5,47 +5,47 @@ import { Code, Database, Globe, Palette, Terminal, Zap, Cloud } from 'lucide-rea
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Programmiersprachen",
+      title: "PROGRAMMIERSPRACHEN",
       icon: Code,
-      skills: ["Python", "Java", "JavaScript", "TypeScript", "C++", "Go"]
+      skills: ["PYTHON", "JAVA", "JAVASCRIPT", "TYPESCRIPT", "C++", "GO"]
     },
     {
-      title: "Web Development",
+      title: "WEB DEVELOPMENT",
       icon: Globe,
-      skills: ["React", "Vue.js", "Node.js", "HTML/CSS", "Express.js", "REST APIs"]
+      skills: ["REACT", "VUE.JS", "NODE.JS", "HTML/CSS", "EXPRESS.JS", "REST APIS"]
     },
     {
-      title: "Datenbanken",
+      title: "DATENBANKEN",
       icon: Database,
-      skills: ["MongoDB", "DynamoDB", "PostgreSQL", "MySQL", "Redis", "Firebase"]
+      skills: ["MONGODB", "DYNAMODB", "POSTGRESQL", "MYSQL", "REDIS", "FIREBASE"]
     },
     {
-      title: "Cloud & AWS",
+      title: "CLOUD & AWS",
       icon: Cloud,
-      skills: ["AWS Lambda", "AWS S3", "EC2", "CloudFormation", "API Gateway", "CloudWatch"]
+      skills: ["AWS LAMBDA", "AWS S3", "EC2", "CLOUDFORMATION", "API GATEWAY", "CLOUDWATCH"]
     },
     {
-      title: "Entwicklungstools",
+      title: "ENTWICKLUNGSTOOLS",
       icon: Terminal,
-      skills: ["VS Code", "Git", "Docker", "IntelliJ IDEA", "PyCharm", "Postman"]
+      skills: ["VS CODE", "GIT", "DOCKER", "INTELLIJ IDEA", "PYCHARM", "POSTMAN"]
     },
     {
-      title: "Salesforce",
+      title: "SALESFORCE",
       icon: Zap,
-      skills: ["Apex", "Lightning Components", "SOQL", "Salesforce Admin", "Process Builder", "Flows"]
+      skills: ["APEX", "LIGHTNING COMPONENTS", "SOQL", "SALESFORCE ADMIN", "PROCESS BUILDER", "FLOWS"]
     }
   ];
 
   return (
-    <section className="py-20 px-6 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{color: '#262525'}}>
-            Technical Skills
+    <section className="py-20 px-8 md:px-16 lg:px-24 bg-white">
+      <div className="max-w-6xl">
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-light mb-4 uppercase tracking-wide font-tt-norms" style={{color: '#262525'}}>
+            TECHNICAL SKILLS
           </h2>
-          <p className="text-lg max-w-3xl mx-auto" style={{color: '#262525'}}>
-            Eine umfassende Übersicht meiner technischen Expertise in verschiedenen Programmiersprachen, 
-            Web-Technologien, Datenbanken und Cloud-Plattformen.
+          <p className="text-lg max-w-3xl font-light font-tt-norms" style={{color: '#262525'}}>
+            EINE UMFASSENDE ÜBERSICHT MEINER TECHNISCHEN EXPERTISE IN VERSCHIEDENEN PROGRAMMIERSPRACHEN, 
+            WEB-TECHNOLOGIEN, DATENBANKEN UND CLOUD-PLATTFORMEN.
           </p>
         </div>
         
@@ -60,14 +60,14 @@ const Skills = () => {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300" style={{backgroundColor: '#262525'}}>
                   <category.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold" style={{color: '#262525'}}>{category.title}</h3>
+                <h3 className="text-xl font-light font-tt-norms" style={{color: '#262525'}}>{category.title}</h3>
               </div>
               
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, skillIndex) => (
                   <span 
                     key={skill}
-                    className="px-3 py-2 text-white rounded-lg text-sm font-medium border-2 hover:bg-gray-700 transition-all duration-200"
+                    className="px-3 py-2 text-white rounded-lg text-sm font-light border-2 hover:bg-gray-700 transition-all duration-200 font-tt-norms"
                     style={{backgroundColor: '#262525', borderColor: '#262525'}}
                   >
                     {skill}

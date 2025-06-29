@@ -5,37 +5,37 @@ import { ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
   const projekte = [
     {
-      title: "Portfolio Website",
-      description: "Persönliches Portfolio erstellt mit React und modernen Web-Technologien",
+      title: "PORTFOLIO WEBSITE",
+      description: "PERSÖNLICHES PORTFOLIO ERSTELLT MIT REACT UND MODERNEN WEB-TECHNOLOGIEN",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      technologies: ["React", "TypeScript", "Tailwind CSS"],
+      technologies: ["REACT", "TYPESCRIPT", "TAILWIND CSS"],
       liveUrl: "#",
       githubUrl: "#"
     },
     {
-      title: "Web-Anwendung",
-      description: "Full-Stack Anwendung mit moderner Architektur und sauberem Design",
+      title: "WEB-ANWENDUNG",
+      description: "FULL-STACK ANWENDUNG MIT MODERNER ARCHITEKTUR UND SAUBEREM DESIGN",
       image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB"],
+      technologies: ["REACT", "NODE.JS", "MONGODB"],
       liveUrl: "#",
       githubUrl: "#"
     }
   ];
 
   return (
-    <section className="py-20 px-6" style={{backgroundColor: '#E4E2DD'}}>
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{color: '#262525'}}>
-            Ausgewählte Projekte
+    <section className="py-20 px-8 md:px-16 lg:px-24" style={{backgroundColor: '#E4E2DD'}}>
+      <div className="max-w-6xl">
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-light mb-4 uppercase tracking-wide font-tt-norms" style={{color: '#262525'}}>
+            AUSGEWÄHLTE PROJEKTE
           </h2>
-          <p className="text-lg max-w-3xl mx-auto" style={{color: '#262525'}}>
-            Eine kuratierte Auswahl meiner Arbeiten, die moderne Web-Entwicklungspraktiken 
-            und sauberes, benutzerorientiertes Design zeigen.
+          <p className="text-lg max-w-3xl font-light font-tt-norms" style={{color: '#262525'}}>
+            EINE KURATIERTE AUSWAHL MEINER ARBEITEN, DIE MODERNE WEB-ENTWICKLUNGSPRAKTIKEN 
+            UND SAUBERES, BENUTZERORIENTIERTES DESIGN ZEIGEN.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl">
           {projekte.map((projekt, index) => (
             <div 
               key={projekt.title}
@@ -52,14 +52,14 @@ const Projects = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2" style={{color: '#262525'}}>{projekt.title}</h3>
-                <p className="mb-4" style={{color: '#262525'}}>{projekt.description}</p>
+                <h3 className="text-xl font-light mb-2 font-tt-norms" style={{color: '#262525'}}>{projekt.title}</h3>
+                <p className="mb-4 font-light font-tt-norms" style={{color: '#262525'}}>{projekt.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {projekt.technologies.map((tech) => (
                     <span 
                       key={tech}
-                      className="px-3 py-1 text-white text-sm rounded-full"
+                      className="px-3 py-1 text-white text-sm rounded-full font-light font-tt-norms"
                       style={{backgroundColor: '#262525'}}
                     >
                       {tech}
@@ -70,19 +70,19 @@ const Projects = () => {
                 <div className="flex gap-3">
                   <a 
                     href={projekt.liveUrl}
-                    className="flex items-center gap-2 px-4 py-2 text-white rounded-lg hover:bg-gray-700 transition-all duration-300 font-medium"
+                    className="flex items-center gap-2 px-4 py-2 text-white rounded-lg hover:bg-gray-700 transition-all duration-300 font-light font-tt-norms"
                     style={{backgroundColor: '#262525'}}
                   >
                     <ExternalLink className="w-4 h-4" />
-                    Live Demo
+                    LIVE DEMO
                   </a>
                   <a 
                     href={projekt.githubUrl}
-                    className="flex items-center gap-2 px-4 py-2 border-2 rounded-lg hover:bg-gray-100 transition-all duration-300"
+                    className="flex items-center gap-2 px-4 py-2 border-2 rounded-lg hover:bg-gray-100 transition-all duration-300 font-light font-tt-norms"
                     style={{borderColor: '#262525', color: '#262525'}}
                   >
                     <Github className="w-4 h-4" />
-                    Code
+                    CODE
                   </a>
                 </div>
               </div>

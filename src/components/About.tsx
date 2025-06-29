@@ -6,31 +6,31 @@ const About = () => {
   const bereiche = [
     {
       icon: Code,
-      title: "Entwicklung",
-      description: "Full-Stack Entwicklung mit React, Node.js und modernen Frameworks"
+      title: "ENTWICKLUNG",
+      description: "FULL-STACK ENTWICKLUNG MIT REACT, NODE.JS UND MODERNEN FRAMEWORKS"
     },
     {
       icon: Palette,
-      title: "Design",
-      description: "UI/UX Design mit Fokus auf Benutzererfahrung und visuelle Ästhetik"
+      title: "DESIGN",
+      description: "UI/UX DESIGN MIT FOKUS AUF BENUTZERERFAHRUNG UND VISUELLE ÄSTHETIK"
     },
     {
       icon: Zap,
-      title: "Performance",
-      description: "Optimierte, schnell ladende Anwendungen nach Best Practices"
+      title: "PERFORMANCE",
+      description: "OPTIMIERTE, SCHNELL LADENDE ANWENDUNGEN NACH BEST PRACTICES"
     }
   ];
 
   return (
-    <section className="py-20 px-6" style={{backgroundColor: '#E4E2DD'}}>
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{color: '#262525'}}>
-            Über mich
+    <section className="py-20 px-8 md:px-16 lg:px-24" style={{backgroundColor: '#E4E2DD'}}>
+      <div className="max-w-6xl">
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-light mb-4 uppercase tracking-wide font-tt-norms" style={{color: '#262525'}}>
+            ÜBER MICH
           </h2>
-          <p className="text-lg max-w-3xl mx-auto" style={{color: '#262525'}}>
-            Ich bin ein leidenschaftlicher Entwickler, der gerne digitale Erlebnisse schafft, die einen Unterschied machen. 
-            Mit Expertise in modernen Web-Technologien und einem Auge für Design.
+          <p className="text-lg max-w-3xl font-light font-tt-norms" style={{color: '#262525'}}>
+            ICH BIN EIN LEIDENSCHAFTLICHER ENTWICKLER, DER GERNE DIGITALE ERLEBNISSE SCHAFFT, DIE EINEN UNTERSCHIED MACHEN. 
+            MIT EXPERTISE IN MODERNEN WEB-TECHNOLOGIEN UND EINEM AUGE FÜR DESIGN.
           </p>
         </div>
         
@@ -44,8 +44,8 @@ const About = () => {
               <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" style={{backgroundColor: '#262525'}}>
                 <bereich.icon className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2" style={{color: '#262525'}}>{bereich.title}</h3>
-              <p style={{color: '#262525'}}>{bereich.description}</p>
+              <h3 className="text-xl font-light mb-2 font-tt-norms" style={{color: '#262525'}}>{bereich.title}</h3>
+              <p className="font-light font-tt-norms" style={{color: '#262525'}}>{bereich.description}</p>
             </div>
           ))}
         </div>
