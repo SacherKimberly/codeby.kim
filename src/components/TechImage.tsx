@@ -5,8 +5,8 @@ const TechImage = () => {
   return (
     <div className="sticky top-0 h-screen w-full overflow-hidden z-0">
       <img 
-        src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&h=1080&fit=crop" 
-        alt="AI Technology Background"
+        src="/lovable-uploads/a713ca57-736d-4b6f-a9e8-74bb4b8b6818.png" 
+        alt="Developer workspace with multiple monitors"
         className="w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-black/30"></div>
