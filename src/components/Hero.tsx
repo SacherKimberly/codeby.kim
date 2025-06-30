@@ -16,16 +16,32 @@ const Hero = () => {
     };
   }, []);
 
+  const scrollToContact = () => {
+    const contactSection = document.querySelector('#contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="min-h-screen flex items-center justify-between relative overflow-hidden bg-white px-8 md:px-16 lg:px-24 max-w-7xl mx-auto">
+    <section className="min-h-screen flex items-center justify-between relative overflow-hidden px-8 md:px-16 lg:px-24 max-w-7xl mx-auto" style={{backgroundColor: '#F7F6F3'}}>
       {/* Animierter Hintergrund mit geometrischen Formen */}
-      <div className="absolute inset-0 bg-white">
+      <div className="absolute inset-0" style={{backgroundColor: '#F7F6F3'}}>
         <div className={`absolute inset-0 transition-all duration-1000 ${
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}>
-          <div className="absolute top-20 left-20 w-32 h-32 bg-gray-100 rounded-full blur-xl animate-pulse" style={{backgroundColor: '#E4E2DD'}}></div>
-          <div className="absolute bottom-32 right-32 w-48 h-48 bg-gray-200 rounded-full blur-2xl animate-pulse delay-700" style={{backgroundColor: '#E4E2DD'}}></div>
-          <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-gray-100 rounded-full blur-lg animate-pulse delay-300" style={{backgroundColor: '#E4E2DD'}}></div>
+          {/* Große dezente Kreise */}
+          <div className="absolute top-20 left-20 w-40 h-40 rounded-full blur-3xl animate-pulse" style={{backgroundColor: '#E4E2DD', opacity: 0.6}}></div>
+          <div className="absolute bottom-32 right-32 w-56 h-56 rounded-full blur-3xl animate-pulse delay-700" style={{backgroundColor: '#D8D5CE', opacity: 0.4}}></div>
+          <div className="absolute top-1/2 left-1/3 w-32 h-32 rounded-full blur-2xl animate-pulse delay-300" style={{backgroundColor: '#E4E2DD', opacity: 0.5}}></div>
+          
+          {/* Zusätzliche dynamische Elemente */}
+          <div className="absolute top-1/4 right-1/4 w-24 h-24 rounded-full blur-xl animate-pulse delay-500" style={{backgroundColor: '#CCC7BC', opacity: 0.3}}></div>
+          <div className="absolute bottom-1/4 left-1/4 w-48 h-48 rounded-full blur-3xl animate-pulse delay-1000" style={{backgroundColor: '#E4E2DD', opacity: 0.3}}></div>
+          
+          {/* Subtile geometrische Formen */}
+          <div className="absolute top-12 right-12 w-16 h-16 rotate-45 blur-sm animate-pulse delay-200" style={{backgroundColor: '#D8D5CE', opacity: 0.4}}></div>
+          <div className="absolute bottom-12 left-12 w-20 h-20 rotate-12 blur-sm animate-pulse delay-800" style={{backgroundColor: '#CCC7BC', opacity: 0.3}}></div>
         </div>
       </div>
       
@@ -61,8 +77,12 @@ const Hero = () => {
             Leidenschaftlich für sauberen Code, beeindruckendes Design und benutzerorientierte Lösungen.
           </p>
           
-          <button className="px-8 py-4 text-white font-light font-tt-norms tracking-wider hover:bg-gray-700 transition-all duration-300" style={{backgroundColor: '#262525'}}>
-            MEINE ARBEIT ANSEHEN
+          <button 
+            onClick={scrollToContact}
+            className="px-8 py-4 text-white font-light font-tt-norms tracking-wider hover:bg-gray-700 transition-all duration-300" 
+            style={{backgroundColor: '#262525'}}
+          >
+            KONTAKT
           </button>
         </div>
       </div>

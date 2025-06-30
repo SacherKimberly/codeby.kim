@@ -24,11 +24,23 @@ const About = () => {
   return (
     <section className="py-32 px-8 md:px-16 lg:px-24 relative z-10 max-w-7xl mx-auto" style={{backgroundColor: '#E4E2DD'}}>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        {/* Linke Spalte - Titel und Beschreibung */}
+        {/* Linke Spalte - Titel, Bild und Beschreibung */}
         <div className="lg:sticky lg:top-32">
           <h2 className="text-4xl md:text-6xl font-light mb-8 font-tt-norms tracking-wide" style={{color: '#262525'}}>
             ÜBER MICH
           </h2>
+          
+          {/* Profilbild */}
+          <div className="mb-8 flex justify-center lg:justify-start">
+            <div className="w-64 h-64 overflow-hidden rounded-lg shadow-lg">
+              <img 
+                src="/lovable-uploads/6c44fc9f-822a-495e-a6de-0f75dd5bf8f8.png" 
+                alt="Kim Sacher - Professionelles Portrait"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          
           <p className="text-xl leading-relaxed font-light font-tt-norms mb-8" style={{color: '#262525'}}>
             Ich bin ein leidenschaftlicher Entwickler, der gerne digitale Erlebnisse schafft, 
             die einen Unterschied machen. Mit Expertise in modernen Web-Technologien und einem Auge für Design.
