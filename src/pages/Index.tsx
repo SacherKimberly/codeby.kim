@@ -9,6 +9,7 @@ import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import WorkApproach from '../components/WorkApproach';
 import Career from '../components/Career';
+import ScrollIndicator from '../components/ScrollIndicator';
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
         <Projects />
         <Contact />
       </div>
+      <ScrollIndicator />
     </div>
   );
 };
