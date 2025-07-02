@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Wordpress, Code2, Palette, Wrench, CheckCircle, ArrowRight, Zap, Shield, Globe, Rocket } from 'lucide-react';
+import { Monitor, Code2, Palette, Wrench, CheckCircle, ArrowRight, Zap, Shield, Globe, Rocket } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const WebDev = () => {
@@ -9,7 +9,7 @@ const WebDev = () => {
 
   const startOptions = [
     {
-      icon: Wordpress,
+      icon: Monitor,
       title: "WordPress",
       description: "Schneller Start mit bewährten CMS-Lösungen",
       advantages: [
@@ -89,7 +89,7 @@ const WebDev = () => {
         }`}>
           <div className="text-center mb-12">
             <div className="relative inline-block">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse" style={{backgroundColor: '#262525'}}>
+              <div className="w-12 h-12 flex items-center justify-center mx-auto mb-4 animate-pulse" style={{backgroundColor: '#262525'}}>
                 <span className="text-white font-bold">1</span>
               </div>
               <h3 className="text-2xl md:text-3xl font-light font-tt-norms tracking-wide" style={{color: '#262525'}}>
@@ -168,7 +168,7 @@ const WebDev = () => {
         }`}>
           <div className="text-center mb-12">
             <div className="relative inline-block">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse animation-delay-500" style={{backgroundColor: '#262525'}}>
+              <div className="w-12 h-12 flex items-center justify-center mx-auto mb-4 animate-pulse animation-delay-500" style={{backgroundColor: '#262525'}}>
                 <span className="text-white font-bold">2</span>
               </div>
               <h3 className="text-2xl md:text-3xl font-light font-tt-norms tracking-wide" style={{color: '#262525'}}>
@@ -255,7 +255,7 @@ const WebDev = () => {
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         .animation-delay-500 { animation-delay: 0.5s; }
       `}</style>
     </section>

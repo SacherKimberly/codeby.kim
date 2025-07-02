@@ -31,19 +31,19 @@ const Hero = () => {
           isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
         }`}>
           {/* Dynamische geometrische Formen mit komplexeren Animationen */}
-          <div className="absolute top-20 left-20 w-40 h-40 rounded-full blur-3xl animate-pulse" 
+          <div className="absolute top-20 left-20 w-40 h-40 blur-3xl animate-pulse" 
                style={{
                  backgroundColor: '#E4E2DD', 
                  opacity: 0.6,
                  animation: 'float 6s ease-in-out infinite, pulse 4s ease-in-out infinite'
                }}></div>
-          <div className="absolute bottom-32 right-32 w-56 h-56 rounded-full blur-3xl animate-pulse delay-700" 
+          <div className="absolute bottom-32 right-32 w-56 h-56 blur-3xl animate-pulse delay-700" 
                style={{
                  backgroundColor: '#D8D5CE', 
                  opacity: 0.4,
                  animation: 'float 8s ease-in-out infinite reverse, pulse 6s ease-in-out infinite'
                }}></div>
-          <div className="absolute top-1/2 left-1/3 w-32 h-32 rounded-full blur-2xl animate-pulse delay-300" 
+          <div className="absolute top-1/2 left-1/3 w-32 h-32 blur-2xl animate-pulse delay-300" 
                style={{
                  backgroundColor: '#E4E2DD', 
                  opacity: 0.5,
@@ -51,13 +51,13 @@ const Hero = () => {
                }}></div>
           
           {/* Zusätzliche schwebende Elemente */}
-          <div className="absolute top-1/4 right-1/4 w-24 h-24 rounded-full blur-xl animate-pulse delay-500" 
+          <div className="absolute top-1/4 right-1/4 w-24 h-24 blur-xl animate-pulse delay-500" 
                style={{
                  backgroundColor: '#CCC7BC', 
                  opacity: 0.3,
                  animation: 'float 5s ease-in-out infinite, pulse 3s ease-in-out infinite'
                }}></div>
-          <div className="absolute bottom-1/4 left-1/4 w-48 h-48 rounded-full blur-3xl animate-pulse delay-1000" 
+          <div className="absolute bottom-1/4 left-1/4 w-48 h-48 blur-3xl animate-pulse delay-1000" 
                style={{
                  backgroundColor: '#E4E2DD', 
                  opacity: 0.3,
@@ -119,7 +119,7 @@ const Hero = () => {
       </div>
       
       {/* Custom CSS für zusätzliche Animationen */}
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
           50% { transform: translateY(-20px) rotate(5deg); }

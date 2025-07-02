@@ -62,8 +62,8 @@ const About = () => {
               />
             </div>
             {/* Animierte Deko-Elemente */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full blur-2xl opacity-30 animate-pulse" style={{backgroundColor: '#262525'}}></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full blur-3xl opacity-20 animate-pulse animation-delay-500" style={{backgroundColor: '#CCC7BC'}}></div>
+            <div className="absolute -top-4 -right-4 w-24 h-24 blur-2xl opacity-30 animate-pulse" style={{backgroundColor: '#262525'}}></div>
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 blur-3xl opacity-20 animate-pulse animation-delay-500" style={{backgroundColor: '#CCC7BC'}}></div>
           </div>
         </div>
         
@@ -122,7 +122,7 @@ const About = () => {
                 transitionDelay: `${index * 200}ms`
               }}
             >
-              <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500" style={{backgroundColor: '#262525'}}>
+              <div className="w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500" style={{backgroundColor: '#262525'}}>
                 <bereich.icon className="w-10 h-10 text-white group-hover:scale-110 transition-transform duration-300" />
               </div>
               <h4 className="text-xl font-light mb-4 font-tt-norms tracking-widest group-hover:text-gray-600 transition-colors duration-300" style={{color: '#262525'}}>{bereich.title}</h4>
@@ -132,7 +132,7 @@ const About = () => {
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         .animation-delay-200 { animation-delay: 0.2s; }
         .animation-delay-500 { animation-delay: 0.5s; }
         
