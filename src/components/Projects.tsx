@@ -1,8 +1,12 @@
 
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Projects = () => {
+  const { isVisible: headerVisible, setElementRef: setHeaderRef } = useScrollAnimation();
+  const { isVisible: projectsVisible, setElementRef: setProjectsRef } = useScrollAnimation();
+
   const projekte = [
     {
       title: "PORTFOLIO WEBSITE",
@@ -35,8 +39,15 @@ const Projects = () => {
 
   return (
     <section className="py-32 px-8 md:px-16 lg:px-24 relative z-10 max-w-7xl mx-auto" style={{backgroundColor: '#E4E2DD'}}>
-      <div className="mb-20">
-        <h2 className="text-4xl md:text-6xl font-light mb-8 font-tt-norms tracking-wide" style={{color: '#262525'}}>
+      <div 
+        ref={setHeaderRef}
+        className={`mb-20 transition-all duration-1000 ease-out ${
+          headerVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-8'
+        }`}
+      >
+        <h2 className="text-4xl md:text-6xl font-light mb-8 font-tt-norms tracking-wide hover:scale-105 transition-transform duration-300" style={{color: '#262525'}}>
           AUSGEWÄHLTE PROJEKTE
         </h2>
         <p className="text-xl max-w-2xl font-light font-tt-norms leading-relaxed" style={{color: '#262525'}}>
@@ -45,31 +56,56 @@ const Projects = () => {
         </p>
       </div>
       
-      <div className="space-y-20">
+      <div ref={setProjectsRef} className="space-y-20">
         {projekte.map((projekt, index) => (
           <div 
             key={projekt.title}
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+            className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center transition-all duration-1000 ease-out ${
               index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+            } ${
+              projectsVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-12'
             }`}
+            style={{
+              transitionDelay: `${index * 200}ms`
+            }}
           >
             {/* Bild */}
             <div className={`relative group overflow-hidden ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
               <img 
                 src={projekt.image} 
                 alt={projekt.title}
-                className="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-80 lg:h-96 object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500"></div>
+              
+              {/* Overlay mit Buttons */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="flex gap-4">
+                  <a 
+                    href={projekt.liveUrl}
+                    className="p-3 bg-white/90 hover:bg-white transition-all duration-300 hover:scale-110"
+                  >
+                    <ExternalLink className="w-6 h-6" style={{color: '#262525'}} />
+                  </a>
+                  <a 
+                    href={projekt.githubUrl}
+                    className="p-3 bg-white/90 hover:bg-white transition-all duration-300 hover:scale-110"
+                  >
+                    <Github className="w-6 h-6" style={{color: '#262525'}} />
+                  </a>
+                </div>
+              </div>
             </div>
             
             {/* Content */}
             <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-              <div className="text-sm font-light font-tt-norms tracking-wider" style={{color: '#262525'}}>
+              <div className="text-sm font-light font-tt-norms tracking-wider opacity-70 hover:opacity-100 transition-opacity duration-300" style={{color: '#262525'}}>
                 {projekt.year}
               </div>
               
-              <h3 className="text-3xl md:text-4xl font-light font-tt-norms" style={{color: '#262525'}}>
+              <h3 className="text-3xl md:text-4xl font-light font-tt-norms hover:text-gray-600 transition-colors duration-300" style={{color: '#262525'}}>
                 {projekt.title}
               </h3>
               
@@ -78,11 +114,14 @@ const Projects = () => {
               </p>
               
               <div className="flex flex-wrap gap-3">
-                {projekt.technologies.map((tech) => (
+                {projekt.technologies.map((tech, techIndex) => (
                   <span 
                     key={tech}
-                    className="px-4 py-2 text-white text-sm font-light font-tt-norms"
-                    style={{backgroundColor: '#262525'}}
+                    className="px-4 py-2 text-white text-sm font-light font-tt-norms hover:bg-gray-700 transition-all duration-300 hover:scale-105"
+                    style={{
+                      backgroundColor: '#262525',
+                      animationDelay: `${techIndex * 100}ms`
+                    }}
                   >
                     {tech}
                   </span>
@@ -92,7 +131,7 @@ const Projects = () => {
               <div className="flex gap-4 pt-4">
                 <a 
                   href={projekt.liveUrl}
-                  className="flex items-center gap-2 px-6 py-3 text-white font-light font-tt-norms hover:bg-gray-700 transition-all duration-300"
+                  className="flex items-center gap-2 px-6 py-3 text-white font-light font-tt-norms hover:bg-gray-700 hover:scale-105 hover:shadow-lg transition-all duration-300"
                   style={{backgroundColor: '#262525'}}
                 >
                   <ExternalLink className="w-4 h-4" />
@@ -100,7 +139,7 @@ const Projects = () => {
                 </a>
                 <a 
                   href={projekt.githubUrl}
-                  className="flex items-center gap-2 px-6 py-3 border font-light font-tt-norms hover:bg-gray-100 transition-all duration-300"
+                  className="flex items-center gap-2 px-6 py-3 border font-light font-tt-norms hover:bg-gray-100 hover:scale-105 transition-all duration-300"
                   style={{borderColor: '#262525', color: '#262525'}}
                 >
                   <Github className="w-4 h-4" />
