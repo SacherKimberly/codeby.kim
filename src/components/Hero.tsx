@@ -30,43 +30,43 @@ const Hero = () => {
   return (
     <>
       {/* Initial Loading Animation */}
-      <div className={`fixed inset-0 z-50 bg-gray-900 flex items-center justify-center transition-all duration-1000 ${
+      <div className={`fixed inset-0 z-50 bg-background flex items-center justify-center transition-all duration-1000 ${
         showInitialAnimation ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}>
         <div className="text-center">
-          <div className="text-6xl md:text-8xl font-light mb-4 font-tt-norms tracking-wide text-white">
-            <span className="inline-block animate-slideInFromLeft">CODIFY</span>
-            <span className="text-blue-400">.</span>
+          <div className="text-6xl md:text-8xl font-light mb-4 font-tt-norms tracking-wide text-foreground">
+            <span className="inline-block animate-slideInFromLeft">CODEBY</span>
+            <span className="text-accent">.</span>
             <span className="inline-block animate-slideInFromRight animation-delay-300">KIM</span>
           </div>
-          <div className="w-64 h-1 bg-gray-700 mx-auto">
-            <div className="h-full bg-blue-400 animate-loadingBar"></div>
+          <div className="w-64 h-1 bg-muted mx-auto">
+            <div className="h-full bg-accent animate-loadingBar"></div>
           </div>
         </div>
       </div>
 
-      <section className="min-h-screen flex items-center justify-between relative overflow-hidden px-8 md:px-16 lg:px-24 max-w-7xl mx-auto bg-gray-900">
+      <section className="min-h-screen flex items-center justify-between relative overflow-hidden px-8 md:px-16 lg:px-24 max-w-7xl mx-auto bg-background">
         {/* Dark animated background elements */}
-        <div className="absolute inset-0 bg-gray-900">
+        <div className="absolute inset-0 bg-background">
           <div className={`absolute inset-0 transition-all duration-2000 ease-out ${
             isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
           }`}>
             {/* Glowing geometric shapes */}
             <div className="absolute top-20 left-20 w-40 h-40 blur-3xl animate-pulse" 
                  style={{
-                   backgroundColor: '#3B82F6', 
+                   backgroundColor: 'hsl(var(--accent))', 
                    opacity: 0.3,
                    animation: 'float 6s ease-in-out infinite, pulse 4s ease-in-out infinite'
                  }}></div>
             <div className="absolute bottom-32 right-32 w-56 h-56 blur-3xl animate-pulse delay-700" 
                  style={{
-                   backgroundColor: '#1E40AF', 
+                   backgroundColor: 'hsl(var(--accent))', 
                    opacity: 0.2,
                    animation: 'float 8s ease-in-out infinite reverse, pulse 6s ease-in-out infinite'
                  }}></div>
             <div className="absolute top-1/2 left-1/3 w-32 h-32 blur-2xl animate-pulse delay-300" 
                  style={{
-                   backgroundColor: '#60A5FA', 
+                   backgroundColor: 'hsl(var(--accent))', 
                    opacity: 0.4,
                    animation: 'float 7s ease-in-out infinite, pulse 5s ease-in-out infinite'
                  }}></div>
@@ -74,7 +74,7 @@ const Hero = () => {
             {/* Grid pattern overlay */}
             <div className="absolute inset-0 opacity-10" 
                  style={{
-                   backgroundImage: 'linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)',
+                   backgroundImage: `linear-gradient(hsl(var(--accent) / 0.1) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--accent) / 0.1) 1px, transparent 1px)`,
                    backgroundSize: '50px 50px'
                  }}></div>
           </div>
@@ -89,12 +89,12 @@ const Hero = () => {
           }`}>
             {/* Domain branding */}
             <div className="mb-6">
-              <span className="text-lg md:text-xl font-light font-tt-norms tracking-widest text-blue-400 animate-fadeInUp">
-                CODIFY.KIM
+              <span className="text-lg md:text-xl font-light font-tt-norms tracking-widest text-accent animate-fadeInUp">
+                CODEBY.KIM
               </span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-light mb-8 font-tt-norms tracking-wide hover:scale-105 transition-transform duration-300 text-white">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-light mb-8 font-tt-norms tracking-wide hover:scale-105 transition-transform duration-300 text-foreground">
               <span className="inline-block animate-slideInFromLeft">KIM</span><br/>
               <span className="inline-block animate-slideInFromRight animation-delay-300">SACHER</span>
             </h1>
@@ -105,7 +105,7 @@ const Hero = () => {
               ? 'translate-y-0 opacity-100' 
               : 'translate-y-12 opacity-0'
           }`}>
-            <p className="text-xl md:text-2xl mb-12 font-light tracking-widest font-tt-norms animate-fadeInUp animation-delay-600 text-gray-300">
+            <p className="text-xl md:text-2xl mb-12 font-light tracking-widest font-tt-norms animate-fadeInUp animation-delay-600 text-muted-foreground">
               KREATIVER ENTWICKLER & DESIGNER
             </p>
           </div>
@@ -115,14 +115,14 @@ const Hero = () => {
               ? 'translate-y-0 opacity-100' 
               : 'translate-y-12 opacity-0'
           }`}>
-            <p className="text-lg max-w-xl leading-relaxed font-light font-tt-norms mb-12 animate-fadeInUp animation-delay-800 text-gray-400">
+            <p className="text-lg max-w-xl leading-relaxed font-light font-tt-norms mb-12 animate-fadeInUp animation-delay-800 text-muted-foreground">
               Entwicklung schöner digitaler Erlebnisse mit modernen Web-Technologien. 
               Leidenschaftlich für sauberen Code, beeindruckendes Design und benutzerorientierte Lösungen.
             </p>
             
             <button 
               onClick={scrollToContact}
-              className="px-8 py-4 bg-blue-600 text-white font-light font-tt-norms tracking-wider hover:bg-blue-700 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 animate-fadeInUp animation-delay-1000"
+              className="px-8 py-4 bg-accent text-accent-foreground font-light font-tt-norms tracking-wider hover:bg-accent/90 hover:scale-105 hover:shadow-lg hover:shadow-accent/25 transition-all duration-300 animate-fadeInUp animation-delay-1000"
             >
               KONTAKT
             </button>
@@ -135,7 +135,7 @@ const Hero = () => {
             ? 'translate-y-0 opacity-100' 
             : 'translate-y-8 opacity-0'
         }`}>
-          <ChevronDown className="w-6 h-6 animate-bounce text-blue-400" />
+          <ChevronDown className="w-6 h-6 animate-bounce text-accent" />
         </div>
         
         {/* Custom CSS for animations */}

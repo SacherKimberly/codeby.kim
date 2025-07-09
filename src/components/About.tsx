@@ -27,7 +27,7 @@ const About = () => {
   ];
 
   return (
-    <section className="py-32 px-8 md:px-16 lg:px-24 relative z-10 max-w-7xl mx-auto bg-gray-800">
+    <section className="py-32 px-8 md:px-16 lg:px-24 relative z-10 max-w-7xl mx-auto">
       {/* Header mit Animation */}
       <div 
         ref={setHeaderRef}
@@ -37,7 +37,7 @@ const About = () => {
             : 'opacity-0 translate-y-8'
         }`}
       >
-        <h2 className="text-4xl md:text-6xl font-light font-tt-norms tracking-wide hover:scale-105 transition-transform duration-300 text-white">
+        <h2 className="text-4xl md:text-6xl font-light font-tt-norms tracking-wide hover:scale-105 transition-transform duration-300 text-foreground">
           ÜBER MICH
         </h2>
       </div>
@@ -62,8 +62,8 @@ const About = () => {
               />
             </div>
             {/* Animierte Deko-Elemente */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500 blur-2xl opacity-30 animate-pulse"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-400 blur-3xl opacity-20 animate-pulse animation-delay-500"></div>
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent blur-2xl opacity-30 animate-pulse"></div>
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent blur-3xl opacity-20 animate-pulse animation-delay-500"></div>
           </div>
         </div>
         
@@ -74,10 +74,10 @@ const About = () => {
             : 'opacity-0 translate-x-8'
         }`}>
           <div className="space-y-6">
-            <p className="text-2xl md:text-3xl leading-relaxed font-light font-tt-norms animate-fadeInUp text-gray-100">
-              Ich bin ein <span className="font-normal relative inline-block hover:scale-105 transition-transform duration-300 text-blue-400">leidenschaftlicher Entwickler</span>, der gerne digitale Erlebnisse schafft, die einen Unterschied machen.
+            <p className="text-2xl md:text-3xl leading-relaxed font-light font-tt-norms animate-fadeInUp text-foreground">
+              Ich bin ein <span className="font-normal relative inline-block hover:scale-105 transition-transform duration-300 text-accent">leidenschaftlicher Entwickler</span>, der gerne digitale Erlebnisse schafft, die einen Unterschied machen.
             </p>
-            <p className="text-xl leading-relaxed font-light font-tt-norms animate-fadeInUp animation-delay-200 text-gray-300">
+            <p className="text-xl leading-relaxed font-light font-tt-norms animate-fadeInUp animation-delay-200 text-muted-foreground">
               Mit Expertise in modernen Web-Technologien und einem Auge für Design entwickle ich innovative Lösungen, die sowohl funktional als auch ästhetisch ansprechend sind.
             </p>
           </div>
@@ -85,12 +85,12 @@ const About = () => {
           {/* Key Stats mit Hover-Effekten */}
           <div className="grid grid-cols-2 gap-8 pt-8">
             <div className="text-center lg:text-left group hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl font-light font-tt-norms mb-2 group-hover:text-blue-400 transition-colors duration-300 text-white">2024</div>
-              <div className="text-sm font-light font-tt-norms uppercase tracking-widest text-gray-400">Freiberuflich</div>
+              <div className="text-3xl font-light font-tt-norms mb-2 group-hover:text-accent transition-colors duration-300 text-foreground">2024</div>
+              <div className="text-sm font-light font-tt-norms uppercase tracking-widest text-muted-foreground">Freiberuflich</div>
             </div>
             <div className="text-center lg:text-left group hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl font-light font-tt-norms mb-2 group-hover:text-blue-400 transition-colors duration-300 text-white">LMU</div>
-              <div className="text-sm font-light font-tt-norms uppercase tracking-widest text-gray-400">Medieninformatik</div>
+              <div className="text-3xl font-light font-tt-norms mb-2 group-hover:text-accent transition-colors duration-300 text-foreground">LMU</div>
+              <div className="text-sm font-light font-tt-norms uppercase tracking-widest text-muted-foreground">Medieninformatik</div>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@ const About = () => {
             ? 'opacity-100 translate-y-0' 
             : 'opacity-0 translate-y-8'
         }`}>
-          <h3 className="text-3xl md:text-4xl font-light font-tt-norms tracking-wide hover:scale-105 transition-transform duration-300 text-white">
+          <h3 className="text-3xl md:text-4xl font-light font-tt-norms tracking-wide hover:scale-105 transition-transform duration-300 text-foreground">
             EXPERTISE
           </h3>
         </div>
@@ -112,7 +112,7 @@ const About = () => {
           {bereiche.map((bereich, index) => (
             <div 
               key={bereich.title}
-              className={`group text-center p-8 transition-all duration-1000 ease-out hover:shadow-lg hover:shadow-blue-500/10 hover:scale-105 bg-gray-700/50 ${
+              className={`group text-center p-8 transition-all duration-1000 ease-out hover:shadow-lg hover:shadow-accent/10 hover:scale-105 bg-card border border-border ${
                 servicesVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-12'
@@ -121,11 +121,11 @@ const About = () => {
                 transitionDelay: `${index * 200}ms`
               }}
             >
-              <div className="w-20 h-20 bg-blue-600 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                <bereich.icon className="w-10 h-10 text-white group-hover:scale-110 transition-transform duration-300" />
+              <div className="w-20 h-20 bg-accent flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <bereich.icon className="w-10 h-10 text-accent-foreground group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h4 className="text-xl font-light mb-4 font-tt-norms tracking-widest group-hover:text-blue-400 transition-colors duration-300 text-white">{bereich.title}</h4>
-              <p className="text-base font-light font-tt-norms leading-relaxed text-gray-300">{bereich.description}</p>
+              <h4 className="text-xl font-light mb-4 font-tt-norms tracking-widest group-hover:text-accent transition-colors duration-300 text-foreground">{bereich.title}</h4>
+              <p className="text-base font-light font-tt-norms leading-relaxed text-muted-foreground">{bereich.description}</p>
             </div>
           ))}
         </div>

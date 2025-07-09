@@ -41,7 +41,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-32 px-8 md:px-16 lg:px-24 relative z-10 max-w-7xl mx-auto bg-gray-800">
+    <section className="py-32 px-8 md:px-16 lg:px-24 relative z-10 max-w-7xl mx-auto">
       <div 
         ref={setHeaderRef}
         className={`mb-20 transition-all duration-1000 ease-out ${
@@ -50,14 +50,14 @@ const Skills = () => {
             : 'opacity-0 translate-y-8'
         }`}
       >
-        <h2 className="text-4xl md:text-6xl font-light mb-8 font-tt-norms tracking-wide hover:scale-105 transition-transform duration-300 text-white">
+        <h2 className="text-4xl md:text-6xl font-light mb-8 font-tt-norms tracking-wide hover:scale-105 transition-transform duration-300 text-foreground">
           TECHNICAL SKILLS
         </h2>
-        <p className="text-xl max-w-3xl font-light font-tt-norms leading-relaxed mb-12 text-gray-300">
+        <p className="text-xl max-w-3xl font-light font-tt-norms leading-relaxed mb-12 text-muted-foreground">
           Eine umfassende Übersicht meiner technischen Expertise in verschiedenen 
           Programmiersprachen, Web-Technologien und Cloud-Plattformen.
         </p>
-        <div className="w-24 h-1 bg-blue-500"></div>
+        <div className="w-24 h-1 bg-accent"></div>
       </div>
       
       <div 
@@ -67,7 +67,7 @@ const Skills = () => {
         {skillCategories.map((category, categoryIndex) => (
           <div 
             key={category.title}
-            className={`group p-8 transition-all duration-1000 ease-out bg-gray-700 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10 ${
+            className={`group p-8 transition-all duration-1000 ease-out bg-card border border-border hover:transform hover:scale-105 hover:shadow-xl hover:shadow-accent/10 ${
               skillsVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-12'
@@ -77,17 +77,17 @@ const Skills = () => {
             }}
           >
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-blue-600 flex items-center justify-center mr-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                <category.icon className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-300" />
+              <div className="w-16 h-16 bg-accent flex items-center justify-center mr-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <category.icon className="w-8 h-8 text-accent-foreground group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-lg font-light font-tt-norms group-hover:text-blue-400 transition-colors duration-300 text-white">{category.title}</h3>
+              <h3 className="text-lg font-light font-tt-norms group-hover:text-accent transition-colors duration-300 text-foreground">{category.title}</h3>
             </div>
             
             <div className="space-y-3">
               {category.skills.map((skill, skillIndex) => (
                 <div 
                   key={skill} 
-                  className="text-base font-light font-tt-norms py-1 hover:translate-x-2 hover:text-blue-400 transition-all duration-300 cursor-default text-gray-300" 
+                  className="text-base font-light font-tt-norms py-1 hover:translate-x-2 hover:text-accent transition-all duration-300 cursor-default text-muted-foreground" 
                   style={{
                     animationDelay: `${skillIndex * 100}ms`
                   }}

@@ -13,17 +13,32 @@ import ScrollIndicator from '../components/ScrollIndicator';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 font-tt-norms">
+    <div className="min-h-screen bg-background text-foreground font-tt-norms">
       <Hero />
       <TechImage />
-      <div className="relative z-10 bg-gray-900">
-        <About />
-        <WebDev />
-        <Career />
-        <WorkApproach />
-        <Skills />
-        <Projects />
-        <Contact />
+      <div className="relative z-10">
+        {/* Section with subtle border and background variation */}
+        <div className="bg-card border-t border-border">
+          <About />
+        </div>
+        <div className="bg-background border-t border-border">
+          <WebDev />
+        </div>
+        <div className="bg-card border-t border-border">
+          <Career />
+        </div>
+        <div className="bg-background border-t border-border">
+          <WorkApproach />
+        </div>
+        <div className="bg-card border-t border-border">
+          <Skills />
+        </div>
+        <div className="bg-background border-t border-border">
+          <Projects />
+        </div>
+        <div className="bg-card border-t border-border">
+          <Contact />
+        </div>
       </div>
       <ScrollIndicator />
     </div>
