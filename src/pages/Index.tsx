@@ -13,10 +13,10 @@ import ScrollIndicator from '../components/ScrollIndicator';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white text-gray-800 font-tt-norms">
+    <div className="min-h-screen bg-gray-900 text-gray-100 font-tt-norms">
       <Hero />
       <TechImage />
-      <div className="relative z-10 bg-white">
+      <div className="relative z-10 bg-gray-900">
         <About />
         <WebDev />
         <Career />
